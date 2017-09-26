@@ -1,3 +1,4 @@
+/* eslint-env jest */
 import React from 'react';
 import { shallow } from 'enzyme';
 import ChildResolver from '../index';
@@ -40,6 +41,7 @@ describe('<ChildResolver />', () => {
       name: 'name',
       count: '2',
     };
+    // eslint-disable-next-line react/prop-types
     const Child = ({ title = 'title' }) => <div>{title}</div>;
 
     const wrapper = shallow(
